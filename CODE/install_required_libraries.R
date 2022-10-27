@@ -13,24 +13,19 @@ required_liraries = c(
   "deSolve",
   "formatR",
   "GA",
-  "geosphere",
   "htmltab",
   "ISOweek",
   "kableExtra",
   "knitr",
   "lubridate",
   "magrittr",
-  "maps",
-  "mapdata",
   "measurements",
   "methods",
-  "sqldf",
-  "wbstats",
-  "XML"
+  "sqldf"
 )
 
 for (l in required_liraries) {
-  installed = require(l)
+  installed = require(l, character.only = TRUE)
   if (!installed) {
     install.packages(l)
   }
