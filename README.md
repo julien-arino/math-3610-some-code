@@ -1,1 +1,1 @@
-# Some code for the MATH 3610 lecture on Solving ODE in R
+# Code for the MATH 3610 lecture on Solving ODE in R
