@@ -17,6 +17,7 @@ required_liraries = c(
   "ISOweek",
   "kableExtra",
   "knitr",
+  "latex2exp",
   "lubridate",
   "magrittr",
   "measurements",
