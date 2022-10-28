@@ -17,10 +17,14 @@ y_axis <- make_y_axis(y_range)
 
 # Are we plotting for a dark background
 plot_blackBG = TRUE
+# Are we saving the figure to a file
+plot_file = TRUE
 
 # Make the plot
-png(file = sprintf("../FIGS/pop_%s.png", ctry), 
-    width = 800, height = 400)
+if (plot_file) {
+  png(file = sprintf("pop_%s.png", ctry), 
+      width = 800, height = 400)
+}
 if (plot_blackBG) {
   par(bg = 'black', fg = 'white') # set background to black, foreground white
   colour = "white"
@@ -36,7 +40,10 @@ axis(2, at = y_axis$ticks, labels = y_axis$labels,
      las = 1,
      col.axis = colour,
      cex.lab = 2)
-dev.off()
-
+if (plot_file) {
+  dev.off()
+}
 # Crop the figure (using a function in useful_functions.R)
-crop_figure(sprintf("../FIGS/pop_%s.png", ctry))
+# if (plot_file) {
+#   crop_figure(sprintf("pop_%s.png", ctry))
+# }
