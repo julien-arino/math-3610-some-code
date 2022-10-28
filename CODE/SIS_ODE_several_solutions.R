@@ -88,7 +88,7 @@ if (plot_blackBG) {
 }
 
 # Plot
-png(file = "../FIGS/ODE_SIS.png",
+png(file = "ODE_SIS.png",
     width = 1200, height = 800, res = 200)
 if (plot_blackBG) {
   par(bg = 'black', fg = 'white') # set background to black, foreground white
@@ -117,5 +117,5 @@ legend("topleft", legend = TeX(names(EP)), cex = 0.75,
        lty = unlist(lapply(EP, function(x) x$lty)),
        lwd = c(3,3,3))
 dev.off()
-crop_figure(file = "../FIGS/ODE_SIS.png")
+crop_figure(file = "ODE_SIS.png")
 
