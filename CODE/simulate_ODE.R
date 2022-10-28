@@ -74,7 +74,7 @@ for (r in R_0) {
 max_I = max(unlist(lapply(sol_ODE, function(x) max(x[,"I"]))))
 
 # Plot
-png(file = "../FIGS/ODE_SIS.png",
+png(file = "ODE_SIS.png",
     width = 1200, height = 800, res = 200)
 y_axis = plot_hr_yaxis(sol_ODE[[1]][,"time"], sol_ODE[[1]][,"I"],
                        y_range = c(0, max_I),
@@ -93,5 +93,5 @@ legend("topleft", legend = TeX(names(EP)), cex = 0.8,
        lty = unlist(lapply(EP, function(x) x$lty)),
        lwd = c(3,3,3))
 dev.off()
-crop_figure(file = "../FIGS/ODE_SIS.png")
+crop_figure(file = "ODE_SIS.png")
 
