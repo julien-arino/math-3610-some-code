@@ -10,7 +10,6 @@ source("useful_functions.R")
 # Right hand side of the ODE
 rhs_SIS_ODE = function(t, x, p) {
   with(as.list(x), {
-    change = 
     dS = p$gamma*I-p$beta*S*I
     dI = p$beta*S*I-p$gamma*I
     list(c(dS, dI))
